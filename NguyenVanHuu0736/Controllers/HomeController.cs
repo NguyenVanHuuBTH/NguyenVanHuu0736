@@ -12,7 +12,7 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-// HỮU1921050736.
+// HỮU1921050736
     public IActionResult Index()
     {
         return View();
