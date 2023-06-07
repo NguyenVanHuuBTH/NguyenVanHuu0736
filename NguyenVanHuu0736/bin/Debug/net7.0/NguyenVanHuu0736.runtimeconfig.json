@@ -2,6 +2,7 @@
   "runtimeOptions": {
     "tfm": "net7.0",
     "frameworks": [
+     
       {
         "name": "Microsoft.NETCore.App",
         "version": "7.0.0"
