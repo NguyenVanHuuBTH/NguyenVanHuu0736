@@ -1,0 +1,44 @@
+@model NguyenVanHuu0736.Models.NVHStudent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NVHStudent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NVHStudentId" />
+             <div class="form-group">
+                <label asp-for="NVHStudentDIACHI" class="control-label"></label>
+                <input asp-for="NVHStudentDIACHI" class="form-control" />
+                <span asp-validation-for="NVHStudentDIACHI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NVHStudentName" class="control-label"></label>
+                <input asp-for="NVHStudentName" class="form-control" />
+                <span asp-validation-for="NVHStudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NVHStudentDIACHI" class="control-label"></label>
+                <input asp-for="NVHStudentDIACHI" class="form-control" />
+                <span asp-validation-for="NVHStudentDIACHI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">QUAY Lại</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

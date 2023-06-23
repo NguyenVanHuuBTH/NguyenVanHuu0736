@@ -1,0 +1,41 @@
+@model IEnumerable<NguyenVanHuu0736.Models.NVHStudent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1></h1>
+
+<p>
+    <a asp-action="Create">THÊM MỚI</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NVHStudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NVHStudentDIACHI)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NVHStudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NVHStudentDIACHI)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NVHStudentId">CHỈNH SỬA</a> |
+                <a asp-action="Details" asp-route-id="@item.NVHStudentId">CHI TIẾT</a> |
+                <a asp-action="Delete" asp-route-id="@item.NVHStudentId">XÓA</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
